@@ -1,4 +1,5 @@
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/ui.dart';
 
 // By using the @client annotation this component will be automatically compiled to javascript and mounted
 // on the client. Therefore:
@@ -11,39 +12,55 @@ class About extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return section([
-      ol([
-        li([
-          h3([text('📖 Documentation')]),
-          text('Jaspr\'s '),
-          a(href: 'https://docs.jaspr.site', [text('official documentation')]),
-          text(' provides you with all information you need to get started.'),
-        ]),
-        li([
-          h3([text('💬 Community')]),
-          text('Got stuck? Ask your question on the official '),
-          a(href: 'https://discord.gg/XGXrGEk4c6', [text('Discord server')]),
-          text(' for the Jaspr community.'),
-        ]),
-        li([
-          h3([text('📦 Ecosystem')]),
-          text(
-              'Get official packages and integrations for your project like jaspr_router, jaspr_tailwind or jaspr_riverpod. Find packages built for Jaspr on pub.dev using the '),
-          a(href: 'https://pub.dev/packages?q=topic%3Ajaspr', [text('#jaspr')]),
-          text(' topic, or publish your own.'),
-        ]),
-        li([
-          h3([text('💙 Support Jaspr')]),
-          text('If you like Jaspr, consider starring us on '),
-          a(href: 'https://github.com/schultek/jaspr', [text('Github')]),
-          text(' and tell your friends.'),
-        ]),
-      ]),
-    ]);
-  }
+    return section(
+      styles: Styles(
+        //minHeight: 90.vh,
+        maxWidth: 90.vw,
+        padding: Spacing.fromLTRB(0.vh, 10.vh, 10.vw, 5.vh),
+        color: Color.rgb(209, 188, 147),
+        textAlign: TextAlign.right, 
+      ),
+      [
+        Grid(columns: 2, spread: true, children: [
+          Column(children:[
+            img(src: '/images/sidebar.png', 
+              alt: 'Ves being a chaotic weasel boi', 
+              styles: Styles(
+                position: Position.fixed(bottom: 0.vh, left: 0.vw),
+                width: 40.vw,
+                overflow: Overflow.hidden
+              ),
+            ),  
+          ]),
 
-  @css
-  static List<StyleRule> get styles => [
-    css('ol').styles(maxWidth: 500.px),
-  ];
+          Column(children:[
+            h3([text('About')]),
+            br(),
+            text('3:11 p.m., May 10, 2025, was the first time I passed out.'),
+            br(),
+            br(),
+            text('Diagnosis? Overwork. That’s not surprising. It was the end of AP exam week, and with seven exams, a track qualifier meet, and my refusal to slow down, my body hit its limit.'),
+            br(),
+            br(),
+            text('But I didn’t. Neither did life. I even repeated the whole shebang the next year, with one slight change.'),
+            br(),
+            br(),
+            text('I made Ves.'),
+            br(),
+            br(),
+            text('Being an overdoer is a bit of a problem. We run on fumes, pretend it’s fine, and then wonder why our bodies struggle. Fixing that is hard. None of us have the time or the brain cells left to figure out when we need to actually breathe. And no one sees our lives well enough to tell us to stop before we crash.'),
+            br(),
+            br(),
+            text('Ves pulls together those branches of your life and takes just a few seconds to nudge you toward balance. It looks at the whole forest of your life and finds the moments where you can slow down and actually recover.'),
+            br(),
+            br(),
+            text('It’s for the students running on four hours of sleep. For the ones whose only free time is the shower. For the ones who need balance.'),
+            br(),
+            br(),
+            text('Our Ves.')
+          ])
+        ])
+      ]
+    );
+  }
 }

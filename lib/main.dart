@@ -4,6 +4,8 @@
 // To run code on the client, use the @client annotation.
 
 // Server-specific jaspr import.
+import 'dart:math';
+
 import 'package:jaspr/server.dart';
 
 // Imports the [App] component.
@@ -23,22 +25,61 @@ void main() {
   // [Document] renders the root document structure (<html>, <head> and <body>)
   // with the provided parameters and components.
   runApp(Document(
-    title: 'ves_website_jaspr',
+    title: 'Ves',
     styles: [
       // Special import rule to include to another css file.
-      css.import('https://fonts.googleapis.com/css?family=Roboto'),
+      css.import('https://fonts.googleapis.com/css?family=Mynerve'),
       // Each style rule takes a valid css selector and a set of styles.
       // Styles are defined using type-safe css bindings and can be freely chained and nested.
+      css('nav').styles(
+        zIndex: ZIndex(1000),
+        padding: Padding.fromLTRB(2.rem, 1.rem, 2.rem, 1.rem),
+        margin: Margin.zero,
+        textAlign: TextAlign.center,
+        backgroundColor: Color.rgb(0, 89, 61),
+      ),
       css('html, body').styles(
         width: 100.percent,
         minHeight: 100.vh,
         padding: Padding.zero,
         margin: Margin.zero,
-        fontFamily: const FontFamily.list([FontFamily('Roboto'), FontFamilies.sansSerif]),
+        fontFamily: const FontFamily.list([FontFamily('Mynerve')]),
+        backgroundColor: Color.rgb(0, 89, 61),
       ),
       css('h1').styles(
         margin: Margin.unset,
+        color: Color.rgb(250, 250, 250),
         fontSize: 4.rem,
+      ),
+      css('h2').styles(
+        margin: Margin.unset,
+        color: Color.rgb(209, 188, 147),
+        fontSize: 3.rem,
+    
+      ),
+      css('h3').styles(
+        margin: Margin.unset,
+        color: Color.rgb(209, 188, 147),
+        fontSize: 2.rem,
+    
+      ),
+      css('p').styles(
+        color: Color.rgb(209, 188, 147),
+      ),
+      css('li').styles(
+        color: Color.rgb(209, 188, 147),
+      ),
+      css('a').styles(
+        color: Color.rgb(135, 211, 124),
+      ),
+      css('table').styles(
+        padding: Padding.all(1.rem),
+        alignContent: AlignContent.center,
+        textAlign: TextAlign.center,
+        textDecoration: TextDecoration(color: Color.rgb(209, 188, 147)),
+      ),
+      css('th, td, tr').styles(
+        alignContent: AlignContent.center
       ),
     ],
     body: App(),

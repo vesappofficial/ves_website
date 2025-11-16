@@ -2,6 +2,9 @@ import 'package:jaspr/jaspr.dart';
 
 import '../components/counter.dart';
 
+//import 'package:jaspr_tailwind/builder.dart';
+
+
 // By using the @client annotation this component will be automatically compiled to javascript and mounted
 // on the client. Therefore:
 // - this file and any imported file must be compilable for both server and client environments.
@@ -31,14 +34,70 @@ class HomeState extends State<Home> {
     }
   }
 
+  
   @override
   Component build(BuildContext context) {
     return section([
-      img(src: 'images/logo.svg', width: 80),
-      h1([text('Welcome')]),
-      p([text('You successfully create a new Jaspr site.')]),
-      div(styles: Styles(height: 100.px), []),
-      const Counter(),
+      section(
+        styles: Styles(
+          minHeight: 100.vh,
+          alignContent: AlignContent.center, 
+          textAlign: TextAlign.center, 
+          backgroundImage: ImageStyle.url('/images/Untitled_Artwork.png'),
+          backgroundSize: BackgroundSize.cover,
+          ),[
+        h1([text('Welcome')]),
+        p([text('Meet Ves, your burnout bestie! 🌿✨')]),
+        ]
+      ),
+      section(
+        styles: Styles(
+          minHeight: 100.vh,
+          alignContent: AlignContent.center,
+          backgroundColor: Color.rgb(10, 18, 42),
+        ), 
+        [
+          table(
+            styles: Styles(
+              minHeight: 80.vh,
+              alignContent: AlignContent.center,
+              color: Color.rgb(209, 188, 147),
+              textAlign: TextAlign.center,
+            ), 
+            [
+              h3(styles: Styles(textAlign: TextAlign.center), [text('Features Coming Soon')]),
+              tr([ //table header row
+                // ignore: sort_children_properties_last
+                th([text('Feature')], scope: 'col'),
+                // ignore: sort_children_properties_last
+                th([text('Description')], scope: 'col'),
+                // ignore: sort_children_properties_last
+                th([text('Availablity')], scope: 'col'),
+              ]),
+              tr([//table data row 1
+                td([text('Burnout Calculator')]),
+                td([text('Ves predicts your burnout risk level based on your lifestyle and work habits.')]),
+                td([text('Coming Soon')])
+              ]),
+              tr([ //table data row 2
+                td([text('Habit Tracking')]),
+                td([text('Keep a daily log of your emotions and identify patterns to better understand your mental health.')]),
+              td([text('Coming Soon')])
+              ]),
+              tr([ //table data row 3
+               td([text('Smart Scheduling')]),
+                td([text('Get personalized recommendations for breaks and activities to help you stay balanced throughout your day.')]),
+                td([text('Coming Soon')])
+              ]),
+              tr([//table data row 4
+                td([text('Relaxation Techniques')]),
+                td([text('Access guided meditations, breathing exercises, and mindfulness practices to unwind.')]),
+               td([text('Coming Soon')])
+              ]),
+            ]
+          )
+        ]
+      ) 
     ]);
   }
 }
