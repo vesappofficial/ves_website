@@ -1,6 +1,5 @@
 import 'package:jaspr/jaspr.dart';
 
-import '../components/counter.dart';
 
 //import 'package:jaspr_tailwind/builder.dart';
 
@@ -40,7 +39,7 @@ class HomeState extends State<Home> {
     return section([
       section(
         styles: Styles(
-          minHeight: 100.vh,
+          minHeight: 95.vh,
           alignContent: AlignContent.center, 
           textAlign: TextAlign.center, 
           backgroundImage: ImageStyle.url('/images/Untitled_Artwork.png'),
@@ -52,27 +51,30 @@ class HomeState extends State<Home> {
       ),
       section(
         styles: Styles(
-          minHeight: 100.vh,
+          minHeight: 95.vh,
           alignContent: AlignContent.center,
           backgroundColor: Color.rgb(10, 18, 42),
         ), 
         [
+          br(),
+          h3(styles: Styles(textAlign: TextAlign.center), [text('Features Coming Soon')]),
+
           table(
             styles: Styles(
+              minWidth: 80.vw,
               minHeight: 80.vh,
-              alignContent: AlignContent.center,
+              margin: Margin.only(left: 10.vw, right: 10.vw),
               color: Color.rgb(209, 188, 147),
               textAlign: TextAlign.center,
             ), 
             [
-              h3(styles: Styles(textAlign: TextAlign.center), [text('Features Coming Soon')]),
               tr([ //table header row
                 // ignore: sort_children_properties_last
-                th([text('Feature')], scope: 'col'),
+                th([text('Feature')], scope: 'col', styles: Styles(width: 15.vw)),
                 // ignore: sort_children_properties_last
-                th([text('Description')], scope: 'col'),
+                th([text('Description')], scope: 'col',styles: Styles(width: 50.vw)),
                 // ignore: sort_children_properties_last
-                th([text('Availablity')], scope: 'col'),
+                th([text('Availablity')], scope: 'col', styles: Styles(width: 15.vw)),
               ]),
               tr([//table data row 1
                 td([text('Burnout Calculator')]),

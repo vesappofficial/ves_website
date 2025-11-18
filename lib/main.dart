@@ -4,7 +4,6 @@
 // To run code on the client, use the @client annotation.
 
 // Server-specific jaspr import.
-import 'dart:math';
 
 import 'package:jaspr/server.dart';
 
@@ -17,7 +16,7 @@ import 'jaspr_options.dart';
 void main() {
   // Initializes the server environment with the generated default options.
   Jaspr.initializeApp(
-    options: defaultJasprOptions,
+  //options: defaultJasprOptions,
   );
 
   // Starts the app.
@@ -26,6 +25,7 @@ void main() {
   // with the provided parameters and components.
   runApp(Document(
     title: 'Ves',
+    
     styles: [
       // Special import rule to include to another css file.
       css.import('https://fonts.googleapis.com/css?family=Mynerve'),
@@ -33,9 +33,8 @@ void main() {
       // Styles are defined using type-safe css bindings and can be freely chained and nested.
       css('nav').styles(
         zIndex: ZIndex(1000),
-        padding: Padding.fromLTRB(2.rem, 1.rem, 2.rem, 1.rem),
         margin: Margin.zero,
-        textAlign: TextAlign.center,
+        textAlign: TextAlign.right,
         backgroundColor: Color.rgb(0, 89, 61),
       ),
       css('html, body').styles(
@@ -80,6 +79,55 @@ void main() {
       ),
       css('th, td, tr').styles(
         alignContent: AlignContent.center
+      ),
+    ],
+    head: [
+      link(rel: 'icon', type: 'image/png', href: 'favicon-32x32.png', attributes: {'sizes': '32x32'}), //FIX
+      nav(  
+        styles: Styles(
+          position: Position.sticky(top: 0.vh),
+          zIndex: ZIndex(1000),
+          maxHeight: 10.vh,
+          padding: Spacing.fromLTRB(5.vw, 3.vh, 5.vw, 3.vh),
+          margin: Margin.zero,
+          backgroundColor: Color.rgb(0, 89, 61),
+        ),
+        [
+          a(
+            href: '/',
+            styles: Styles(
+              position: Position.absolute(left: 5.vw, top: 2.vh),
+              color: Color.rgb(250, 250, 250),
+              textAlign: TextAlign.left,
+              fontSize: 2.rem,
+              textDecoration: TextDecoration.none
+            ),
+            [text('Ves')],
+          ),
+          a(
+            href: '/about',
+            styles: Styles(
+              //position: Position.absolute(right: 20.vw, top: 4.vh),
+              padding: Spacing.only(right: 2.vw),
+              color: Color.rgb(250, 250, 250),
+              textAlign: TextAlign.right,
+              fontSize: 1.rem,
+              textDecoration: TextDecoration.none,
+            ),
+            [text('About')],
+          ),        
+          a(
+            href: '/contact',
+            styles: Styles(
+              //position: Position.absolute(right: 10.vw, top: 4.vh),
+              color: Color.rgb(250, 250, 250),
+              textAlign: TextAlign.right,
+              fontSize: 1.rem,
+              textDecoration: TextDecoration.none,
+            ),
+            [text('Contact Us')],
+          ),
+        ],
       ),
     ],
     body: App(),

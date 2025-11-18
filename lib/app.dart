@@ -1,9 +1,9 @@
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
-import 'components/header.dart';
 import 'pages/about.dart';
 import 'pages/home.dart';
+import 'pages/Contact Us.dart';
 
 // The main component of your application.
 //
@@ -18,10 +18,11 @@ class App extends StatelessComponent {
     
     // Renders a <div class="main"> html element with children.
     return div(classes: 'main', [
-      const Header(),
+    //const Header(),
       Router(routes: [
         Route(path: '/', title: 'Home', builder: (context, state) => const Home()),
         Route(path: '/about', title: 'About', builder: (context, state) => const About()),
+        Route(path: '/contact', title: 'Contact Us', builder: (context, state) => const Contact()),
       ]),
     ]);
   }
