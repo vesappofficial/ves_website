@@ -42,11 +42,11 @@ class HomeState extends State<Home> {
           minHeight: 95.vh,
           alignContent: AlignContent.center, 
           textAlign: TextAlign.center, 
-          backgroundImage: ImageStyle.url('/images/Untitled_Artwork.png'),
+          backgroundImage: ImageStyle.url('/images/unrender.png'),
           backgroundSize: BackgroundSize.cover,
           ),[
         h1([text('Welcome')]),
-        p([text('Meet Ves, your burnout bestie! 🌿✨')]),
+        p(styles: Styles(color: Colors.white), [text('Meet Ves, your burnout bestie! 🌿✨')]), //test
         ]
       ),
       section(
