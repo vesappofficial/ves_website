@@ -24,6 +24,7 @@ void main() {
   // [Document] renders the root document structure (<html>, <head> and <body>)
   // with the provided parameters and components.
   runApp(Document(
+    base: '<ves_website_jaspr>',
     title: 'Ves',
     
     styles: [
