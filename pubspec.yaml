@@ -19,4 +19,6 @@ dev_dependencies:
 
 jaspr:
   mode: static
+  assets:
+    - web/
 
