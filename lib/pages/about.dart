@@ -23,7 +23,7 @@ class About extends StatelessComponent {
       [
         Grid(columns: 2, spread: true, children: [
           Column(children:[
-            img(src: '/images/sidebarWithVes.png', 
+            img(src: 'ves_website_jasper/images/sidebarWithVes.png', 
               alt: 'Ves being a chaotic weasel boi', 
               styles: Styles(
                 position: Position.fixed(bottom: 0.vh, left: 0.vw),
