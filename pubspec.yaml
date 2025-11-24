@@ -21,4 +21,8 @@ jaspr:
   mode: static
   assets:
     - web/
+  routes:
+    -/
+    -/about
+    -/contact
 
