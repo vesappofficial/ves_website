@@ -95,7 +95,7 @@ void main() {
         ),
         [
           a(
-            href: '/',
+            href: '/ves_website/',
             styles: Styles(
               position: Position.absolute(left: 5.vw, top: 2.vh),
               color: Color.rgb(250, 250, 250),
@@ -106,7 +106,7 @@ void main() {
             [text('Ves')],
           ),
           a(
-            href: '/about',
+            href: '/ves_website/about/',
             styles: Styles(
               //position: Position.absolute(right: 20.vw, top: 4.vh),
               padding: Spacing.only(right: 2.vw),
@@ -118,7 +118,7 @@ void main() {
             [text('About')],
           ),        
           a(
-            href: '/contact',
+            href: '/ves_website/contact/',
             styles: Styles(
               //position: Position.absolute(right: 10.vw, top: 4.vh),
               color: Color.rgb(250, 250, 250),
