@@ -42,7 +42,7 @@ class HomeState extends State<Home> {
           minHeight: 95.vh,
           alignContent: AlignContent.center, 
           textAlign: TextAlign.center, 
-          backgroundImage: ImageStyle.url('/ves_website_jaspr/images/unrender.png'),
+          backgroundImage: ImageStyle.url('/ves_website_jaspr/web/images/unrender.png'),
           backgroundSize: BackgroundSize.cover,
           ),[
         h1([text('Welcome')]),
