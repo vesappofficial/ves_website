@@ -20,7 +20,7 @@ dev_dependencies:
 jaspr:
   mode: static
   assets:
-    - /images/
+    - images/
   routes:
     -/
     -/about
