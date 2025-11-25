@@ -30,7 +30,7 @@ class Contact extends StatelessComponent {
             a(href: 'https://youtube.com/@vesapp', [text('YouTube')]),
             br(),
             text('or join our '),
-            a(href: 'https://discord.gg/YCCMJdJs', [text('Discord server')],),
+            a(href: 'https://discord.com/channels/1438318279713095762/1438323591350452275', [text('Discord server')],),
             text('.')
           ],),
           Column(crossAxisAlignment: AlignItems.center, children: [
