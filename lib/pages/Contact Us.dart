@@ -11,7 +11,7 @@ class Contact extends StatelessComponent {
       styles: Styles(
         minHeight: 90.vh,
         alignContent: AlignContent.center,
-        backgroundImage: ImageStyle.url('/ves_website_jaspr/web/images/Leaves.png'),
+        backgroundImage: ImageStyle.url('/ves_website/web/images/Leaves.png'),
         backgroundSize: BackgroundSize.sides(Unit.auto, 100.vh),
       ),
       [Column(mainAxisAlignment: JustifyContent.center, children:[

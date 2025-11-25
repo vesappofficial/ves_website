@@ -83,7 +83,7 @@ void main() {
       ),
     ],
     head: [
-      link(rel: 'icon', type: 'image/png', href: 'favicon-32x32.png', attributes: {'sizes': '32x32'}), //FIX
+      link(rel: 'icon', type: 'image/ico', href: 'favicon.ico', attributes: {'sizes': '32x32'}), //FIX
       nav(  
         styles: Styles(
           position: Position.sticky(top: 0.vh),
