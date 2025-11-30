@@ -82,16 +82,11 @@ class HomeState extends State<Home> {
                 td([text('Coming Soon')])
               ]),
               tr([ //table data row 2
-                td([text('Habit Tracking')]),
-                td([text('Keep a daily log of your emotions and identify patterns to better understand your mental health.')]),
-              td([text('Coming Soon')])
-              ]),
-              tr([ //table data row 3
                td([text('Smart Scheduling')]),
                 td([text('Get personalized recommendations for breaks and activities to help you stay balanced throughout your day.')]),
                 td([text('Coming Soon')])
               ]),
-              tr([//table data row 4
+              tr([//table data row 3
                 td([text('Relaxation Techniques')]),
                 td([text('Access guided meditations, breathing exercises, and mindfulness practices to unwind.')]),
                td([text('Coming Soon')])
