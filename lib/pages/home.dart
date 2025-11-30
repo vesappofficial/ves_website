@@ -59,7 +59,7 @@ class HomeState extends State<Home> {
               textAlign: TextAlign.center,
               fontSize: 1.rem,
               textDecoration: TextDecoration.none,
-              backgroundColor: Color.rgb(0, 89, 61)
+              backgroundColor: Color.rgb(10, 18, 42)
             ),
             [text('Join the Waitlist')],
           )
