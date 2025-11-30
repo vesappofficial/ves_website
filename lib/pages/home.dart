@@ -51,8 +51,8 @@ class HomeState extends State<Home> {
         a(
             href: '/ves_website/waitlist/',
             styles: Styles(
-              minWidth: 20.vw,
-              minHeight: 2.rem,
+              minWidth: 30.vw,
+              minHeight: 3.rem,
               radius: BorderRadius.circular(2.vw),
               alignContent: AlignContent.center,
               color: Color.rgb(250, 250, 250),
