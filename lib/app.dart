@@ -4,6 +4,7 @@ import 'package:jaspr_router/jaspr_router.dart';
 import 'pages/about.dart';
 import 'pages/home.dart';
 import 'pages/Contact Us.dart';
+import 'pages/waitlist.dart';
 
 // The main component of your application.
 //
@@ -23,6 +24,7 @@ class App extends StatelessComponent {
         Route(path: '/', title: 'Home', builder: (context, state) => const Home()),
         Route(path: '/about', title: 'About', builder: (context, state) => const About()),
         Route(path: '/contact', title: 'Contact Us', builder: (context, state) => const Contact()),
+        Route(path: '/waitlist', title: 'Waitlist', builder: (context, state) => const Waitlist())
       ]),
     ]);
   }
