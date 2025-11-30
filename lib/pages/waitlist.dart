@@ -16,12 +16,13 @@ class Waitlist  extends StatelessComponent {
       ),
       [Column(mainAxisAlignment: JustifyContent.center, children:[
         h3(styles: Styles(textAlign: TextAlign.center), [text('Join the Waitlist')]),
+        br(),
         Column(crossAxisAlignment: AlignItems.center, children: [
           iframe(src: 'https://docs.google.com/forms/d/e/1FAIpQLSdNUIDSbij9s5dqkAQDpHHidVphXMfq4-bOpbL8Sr6L3v2fpA/viewform?embedded=true', attributes: {'width': 'auto', 'height': 'auto', 'frameborder': '0', 'marginheight': '0', 'marginwidth': '0'}, 
             styles: Styles(
               position: Position.sticky(bottom: 10.vh),
               minWidth: 50.vw,
-              minHeight: 60.vh,
+              minHeight: 70.vh,
               radius: BorderRadius.circular(2.vw),
               backgroundColor: Color.rgb(209, 188, 147)
               ),
