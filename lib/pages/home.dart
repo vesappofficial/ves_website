@@ -48,12 +48,21 @@ class HomeState extends State<Home> {
         h1([text('Welcome')]),
         p(styles: Styles(color: Colors.white), [text('Meet Ves, your burnout bestie! 🌿✨')]),
         br(),
-        button(
-          onClick: () {
-            a(href: 'ves_website/waitlist', []);
-          },
-          [text('Join the Waitlist')]
-        )
+        a(
+            href: '/ves_website/waitlist/',
+            styles: Styles(
+              minWidth: 20.vw,
+              minHeight: 2.rem,
+              radius: BorderRadius.circular(2.vw),
+              alignContent: AlignContent.center,
+              color: Color.rgb(250, 250, 250),
+              textAlign: TextAlign.center,
+              fontSize: 1.rem,
+              textDecoration: TextDecoration.none,
+              backgroundColor: Color.rgb(0, 89, 61)
+            ),
+            [text('Join the Waitlist')],
+          )
         ]
       ),
       section(
