@@ -48,7 +48,9 @@ class HomeState extends State<Home> {
         h1([text('Welcome')]),
         p(styles: Styles(color: Colors.white), [text('Meet Ves, your burnout bestie! 🌿✨')]),
         br(),
-        a(
+        ]
+      ),
+      a(
             href: '/ves_website/waitlist/',
             styles: Styles(
               minWidth: 50.vw,
@@ -62,9 +64,7 @@ class HomeState extends State<Home> {
               backgroundColor: Color.rgb(10, 18, 42)
             ),
             [text('   Join the Waitlist   ')],
-          )
-        ]
-      ),
+          ),
       section(
         styles: Styles(
           minHeight: 95.vh,
