@@ -22,7 +22,7 @@ class Waitlist  extends StatelessComponent {
             styles: Styles(
               position: Position.sticky(bottom: 10.vh),
               minWidth: 50.vw,
-              minHeight: 70.vh,
+              minHeight: 65.vh,
               radius: BorderRadius.circular(2.vw),
               backgroundColor: Color.rgb(209, 188, 147)
               ),

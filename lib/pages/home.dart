@@ -46,7 +46,14 @@ class HomeState extends State<Home> {
           backgroundSize: BackgroundSize.cover,
           ),[
         h1([text('Welcome')]),
-        p(styles: Styles(color: Colors.white), [text('Meet Ves, your burnout bestie! 🌿✨')]), //test
+        p(styles: Styles(color: Colors.white), [text('Meet Ves, your burnout bestie! 🌿✨')]),
+        br(),
+        button(
+          onClick: () {
+            a(href: 'ves_website/waitlist', []);
+          },
+          [text('Join the Waitlist')]
+        )
         ]
       ),
       section(
