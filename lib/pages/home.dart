@@ -51,6 +51,7 @@ class HomeState extends State<Home> {
         ]
       ),
       a(
+            display: Display.block,
             href: '/ves_website/waitlist/',
             styles: Styles(
               minWidth: 50.vw,
