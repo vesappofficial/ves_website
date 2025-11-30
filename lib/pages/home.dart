@@ -51,8 +51,8 @@ class HomeState extends State<Home> {
         a(
             href: '/ves_website/waitlist/',
             styles: Styles(
-              minWidth: 30.vw,
-              minHeight: 3.rem,
+              minWidth: 50.vw,
+              minHeight: 4.rem,
               radius: BorderRadius.circular(2.vw),
               alignContent: AlignContent.center,
               color: Color.rgb(250, 250, 250),
@@ -61,7 +61,7 @@ class HomeState extends State<Home> {
               textDecoration: TextDecoration.none,
               backgroundColor: Color.rgb(10, 18, 42)
             ),
-            [text('Join the Waitlist')],
+            [text('   Join the Waitlist   ')],
           )
         ]
       ),
