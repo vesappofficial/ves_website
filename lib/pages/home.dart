@@ -55,7 +55,7 @@ class HomeState extends State<Home> {
               minWidth: 30.vw,
               minHeight: 3.rem,
               maxWidth: 40.vw,
-              margin: EdgeInsets.symmetric(horizontal: Unit.auto),
+              margin: Margin.symmetric(horizontal: Unit.auto),
               radius: BorderRadius.circular(2.vw),
               alignItems: AlignItems.center,
               alignContent: AlignContent.center,
