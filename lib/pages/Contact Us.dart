@@ -1,6 +1,5 @@
-import 'package:jaspr/jaspr.dart';
 import 'package:jaspr/ui.dart';
-import 'dart:io';
+
 @client
 class Contact extends StatelessComponent {
   const Contact({super.key});

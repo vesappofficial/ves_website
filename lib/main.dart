@@ -11,6 +11,7 @@ import 'package:jaspr/server.dart';
 import 'app.dart';
 
 // This file is generated automatically by Jaspr, do not remove or edit.
+// ignore: unused_import
 import 'jaspr_options.dart';
 
 void main() {
